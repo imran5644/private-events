@@ -5,8 +5,12 @@
       </h1>
       <hr>
       <hr>
+      <h2 class='text-center'>
+        Past Events
+      </h2>
+      <hr>
       <p>
-        <% @events.each do |eves| %>
+        <% @events.past.each do |eves| %>
           <p> <%= eves.description %> </p>
           <small><%= eves.event_date %> </small>
           <br>
@@ -16,6 +20,22 @@
           
         <% end %>
       </p>
-    
+      <hr>
+      <hr>
+      <h2 class='text-center'>
+        Upcomming Events
+      </h2>
+      <hr>
+      <p>
+        <% @events.future.each do |eves| %>
+          <p> <%= eves.description %> </p>
+          <small><%= eves.event_date %> </small>
+          <br>
+          <small> <%= link_to 'show event', eves %> </small>
+          <br>
+          <br>
+          
+        <% end %>
+      </p>
   </div>
 </div>

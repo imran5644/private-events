@@ -6,6 +6,14 @@
       <p class='text-center'>
         <%= @event.event_date %>
       </p>
-     
+      <h3 class='text-center'>
+        Attendees are :
+      </h3>
+      <% @event.attendees.each do |attendee| %> 
+        <% if attendee %>
+          <small> <%= attendee.name %> </small>
+          <br>
+        <% end %>
+      <% end %>
   </div>
 </div>
